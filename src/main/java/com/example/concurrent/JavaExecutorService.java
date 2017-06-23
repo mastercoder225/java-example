@@ -7,7 +7,6 @@ public class JavaExecutorService {
 
     public static void main(String[] args) {
         ExecutorService es = Executors.newSingleThreadExecutor();
-        es.sub
 
     }
 }
