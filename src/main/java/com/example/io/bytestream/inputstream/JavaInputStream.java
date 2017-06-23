@@ -1,4 +1,4 @@
-package com.example.io.bytestream;
+package com.example.io.bytestream.inputstream;
 
 public class JavaInputStream {
 

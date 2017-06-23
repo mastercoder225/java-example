@@ -1,4 +1,4 @@
-package com.example.io.charstream;
+package com.example.io.charstream.reader;
 
 public class JavaReader {
 
