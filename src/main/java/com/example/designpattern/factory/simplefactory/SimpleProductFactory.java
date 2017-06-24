@@ -1,6 +1,6 @@
 package com.example.designpattern.factory.simplefactory;
 
-public class ProductFactory {
+public class SimpleProductFactory {
 
     public static Product newProduct(char c) {
         switch (c) {
