@@ -14,4 +14,16 @@ public class SimpleProductFactory {
                 throw new RuntimeException("Unknown Product Type");
         }
     }
+
+    public static Product newProductA() {
+        return new ConcreteProductA();
+    }
+
+    public static Product newProductB() {
+        return new ConcreteProductB();
+    }
+
+    public static Product newProductC() {
+        return new ConcreteProductC();
+    }
 }

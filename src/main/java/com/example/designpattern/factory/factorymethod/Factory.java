@@ -1,4 +1,7 @@
 package com.example.designpattern.factory.factorymethod;
 
-public interface Product {
+public interface Factory {
+
+    Product newProduct();
+
 }
