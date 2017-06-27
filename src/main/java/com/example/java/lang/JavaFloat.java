@@ -1,4 +1,4 @@
-package com.example.java.basic;
+package com.example.java.lang;
 
 public class JavaFloat {
 

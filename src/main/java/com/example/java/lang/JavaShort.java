@@ -1,4 +1,4 @@
-package com.example.java.basic;
+package com.example.java.lang;
 
 /**
  * Created by zhangjian on 2017/6/23.
