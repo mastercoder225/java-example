@@ -3,12 +3,13 @@ package com.example.java.designpattern.factory.simplefactory;
 public class AppContext {
 
     public static void main(String[] args) {
-        Product a1 = SimpleProductFactory.newProduct('A');
-        Product b1 = SimpleProductFactory.newProduct('B');
-        Product c1 = SimpleProductFactory.newProduct('C');
+        Product a1 = ProductFactory.newProduct('a');
+        Product a2 = ProductFactory.newProductA();
 
-        Product a2 = SimpleProductFactory.newProductA();
-        Product b2 = SimpleProductFactory.newProductB();
-        Product c2 = SimpleProductFactory.newProductC();
+        Product b1 = ProductFactory.newProduct('b');
+        Product b2 = ProductFactory.newProductB();
+
+        Product c1 = ProductFactory.newProduct('c');
+        Product c2 = ProductFactory.newProductC();
     }
 }

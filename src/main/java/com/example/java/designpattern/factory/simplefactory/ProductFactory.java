@@ -1,17 +1,17 @@
 package com.example.java.designpattern.factory.simplefactory;
 
-public class SimpleProductFactory {
+public class ProductFactory {
 
     public static Product newProduct(char c) {
         switch (c) {
-            case 'A':
+            case 'a':
                 return new ConcreteProductA();
-            case 'B':
+            case 'b':
                 return new ConcreteProductB();
-            case 'C':
+            case 'c':
                 return new ConcreteProductC();
             default:
-                throw new RuntimeException("Unknown Product Type");
+                throw new RuntimeException("product type unknown");
         }
     }
 
