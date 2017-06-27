@@ -7,7 +7,7 @@ public class SingletonV1 {
 
     public static SingletonV1 getInstance() {
         if (instance == null) {
-            return new SingletonV1();
+            instance = new SingletonV1();
         }
 
         return instance;

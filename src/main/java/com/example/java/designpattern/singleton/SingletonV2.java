@@ -7,7 +7,7 @@ public class SingletonV2 {
 
     public static synchronized SingletonV2 getInstance() {
         if (instance == null) {
-            return new SingletonV2();
+            instance = new SingletonV2();
         }
 
         return instance;
