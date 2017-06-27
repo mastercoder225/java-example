@@ -10,9 +10,4 @@ public class AppContext {
     public void applyStrategy() {
         strategy.apply();
     }
-
-    public static void main(String[] args) {
-        AppContext appContext = new AppContext(new ConcreteStrategyB());
-        appContext.applyStrategy();
-    }
 }
