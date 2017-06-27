@@ -11,10 +11,10 @@ public class AppContext {
         subject.registerObserver(observerA);
         subject.registerObserver(observerB);
         subject.registerObserver(observerC);
-        subject.notifyObservers();
+        subject.notifyAllObservers();
 
         subject.removeObserver(observerA);
         subject.removeObserver(observerC);
-        subject.notifyObservers();
+        subject.notifyAllObservers();
     }
 }

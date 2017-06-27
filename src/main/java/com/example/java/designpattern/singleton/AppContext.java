@@ -1,6 +1,6 @@
 package com.example.java.designpattern.singleton;
 
-public class AppTest {
+public class AppContext {
 
     public static void main(String[] args) {
         SingletonV1 s1 = SingletonV1.getInstance();

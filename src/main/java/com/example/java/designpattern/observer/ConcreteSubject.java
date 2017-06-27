@@ -17,7 +17,7 @@ public class ConcreteSubject implements Subject {
     }
 
     @Override
-    public void notifyObservers() {
+    public void notifyAllObservers() {
         observerList.forEach(Observer::update);
     }
 }
