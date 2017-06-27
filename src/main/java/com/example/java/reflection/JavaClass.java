@@ -1,4 +1,4 @@
-package com.example.java.reflect;
+package com.example.java.reflection;
 
 public class JavaClass {
 
