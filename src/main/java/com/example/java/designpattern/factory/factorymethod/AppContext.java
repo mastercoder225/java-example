@@ -1,9 +1,10 @@
 package com.example.java.designpattern.factory.factorymethod;
 
 public class AppContext {
-    private static Factory factory = new ConcreteFactoryA();
+    private static Factory factory;
 
     public static void main(String[] args) {
+        factory = new ConcreteFactoryA();
         Product a = factory.newProduct();
 
         factory = new ConcreteFactoryB();
