@@ -32,7 +32,5 @@ public class JavaClass {
         Class<Boolean>   c7 = Boolean.class;
         Class<Character> c8 = Character.class;
         Class<Void>      c9 = Void.class;
-
-        System.out.println(a1.isPrimitive());
     }
 }
