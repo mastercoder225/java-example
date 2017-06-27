@@ -3,9 +3,9 @@ package com.example.java.designpattern.singleton;
 public class AppContext {
 
     public static void main(String[] args) {
-        Singleton singleton = Singleton.getInstance();
+        SingletonV1 singleton = SingletonV1.getInstance();
 
-        SingletonThreadSafeV1 singletonThreadSafeV1 = SingletonThreadSafeV1.getInstance();
-        SingletonThreadSafeV2 singletonThreadSafeV2 = SingletonThreadSafeV2.getInstance();
+        SingletonV2 singletonV2 = SingletonV2.getInstance();
+        SingletonV3 singletonV3 = SingletonV3.getInstance();
     }
 }
