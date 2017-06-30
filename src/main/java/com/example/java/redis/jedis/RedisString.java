@@ -22,5 +22,13 @@ public class RedisString {
         jedis.getrange("K", 0, -7);  // Redis
         jedis.getrange("K", 5, -1);  // String
         jedis.getrange("K", -6, -1); // String
+
+        jedis.set("K", "1");  // OK K:1
+        jedis.incr("K");      // 2  K:2
+        jedis.incrBy("K", 5); // 7  K:7
+        jedis.decr("K");      // 6  K:6
+        jedis.decrBy("K", 5); // 1  K:1
+        jedis.incrByFloat("K", 1);   // 2   K:2
+        jedis.incrByFloat("K", 1.5); // 3.5 K:3.5
     }
 }
