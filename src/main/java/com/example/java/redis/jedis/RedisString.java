@@ -14,6 +14,9 @@ public class RedisString {
         jedis.set("K", "V5", "XX", "EX", 10);    // OK K:V5 10s
         jedis.set("K", "V6", "XX", "PX", 10000); // OK K:V6 10000ms
 
+        jedis.ttl("K");  // 10
+        jedis.pttl("K"); // 10000
+
         jedis.get("K"); // V6
         jedis.getSet("K", "RedisString"); // V6 K:RedisString
         jedis.getrange("K", 0, -1);  // RedisString
@@ -22,6 +25,9 @@ public class RedisString {
         jedis.getrange("K", 2, -4);  // disStr
         jedis.getrange("K", -9, -4); // disStr
         jedis.getrange("K", -9, 7);  // disStr
+        jedis.setrange("K", 5, "Application"); // 16 K:RedisApplication
+        jedis.append("K", "Demo"); // 20 K:RedisApplicationDemo
+        jedis.strlen("K"); // 20
 
         jedis.incr("K_INT");      // 1 K_INT:1
         jedis.incrBy("K_INT", 5); // 6 K_INT:6
