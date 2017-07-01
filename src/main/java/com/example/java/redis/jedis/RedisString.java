@@ -36,8 +36,9 @@ public class RedisString {
         jedis.incrByFloat("K_INT", 1.0); // 1.0 K_INT:1
         jedis.incrByFloat("K_INT", 1.5); // 2.5 K_INT:2.5
 
-        jedis.setbit("K_BIT", 7, "1"); // false K_BIT:0000_0001
-        jedis.setbit("K_BIT", 7, "1"); // true  K_BIT:0000_0001
+        jedis.setbit("K_BIT", 20, "1"); // false K_BIT:00000000_00000000_00001000
+        jedis.setbit("K_BIT", 20, "1"); // true  K_BIT:00000000_00000000_00001000
+
 
         jedis.del("K"); // 1
         jedis.del("K_INT", "K_BIT"); // 2
