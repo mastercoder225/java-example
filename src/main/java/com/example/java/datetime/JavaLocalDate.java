@@ -14,6 +14,8 @@ public class JavaLocalDate {
 //        LocalDate f = LocalDate.ofEpochDay(7725);
 //        LocalDate g = LocalDate.parse("1991-02-25");
 
+        System.out.println(a);
+
         LocalDate localDate = LocalDate.of(1991, Month.FEBRUARY, 25);
         {
             int year = localDate.getYear();
