@@ -13,9 +13,9 @@ public class JavaSimpleEmail {
         email.setAuthentication("username", "password");
         email.setSSLOnConnect(true);
         email.setFrom("809730879@qq.com");
+        email.addTo("386657687@qq.com");
         email.setSubject("Email Subject");
         email.setMsg("Email Content");
-        email.addTo("386657687@qq.com");
         email.send();
     }
 }
