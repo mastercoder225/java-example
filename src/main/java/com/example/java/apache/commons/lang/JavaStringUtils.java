@@ -17,21 +17,47 @@ public class JavaStringUtils {
         StringUtils.isBlank(" ");   // true
         StringUtils.isBlank("abc"); // false
 
-        // trim|trimToNull|trimToEmpty
+        // trim|trimToEmpty|trimToNull
         StringUtils.trim(null);    // null
         StringUtils.trim("");      // ""
         StringUtils.trim(" ");     // ""
         StringUtils.trim(" abc "); // "abc"
+
+        StringUtils.trimToEmpty(null);    // ""
+        StringUtils.trimToEmpty("");      // ""
+        StringUtils.trimToEmpty(" ");     // ""
+        StringUtils.trimToEmpty(" abc "); // "abc"
 
         StringUtils.trimToNull(null);    // null
         StringUtils.trimToNull("");      // null
         StringUtils.trimToNull(" ");     // null
         StringUtils.trimToNull(" abc "); // "abc"
 
-        StringUtils.trimToEmpty(null);    // ""
-        StringUtils.trimToEmpty("");      // ""
-        StringUtils.trimToEmpty(" ");     // ""
-        StringUtils.trimToEmpty(" abc "); // "abc"
+        // strip|stripToEmpty|stripToNull|stripStart|stripEnd
+        StringUtils.strip(null);    // null
+        StringUtils.strip("");      // ""
+        StringUtils.strip(" ");     // ""
+        StringUtils.strip(" abc "); // "abc"
+
+        StringUtils.stripToEmpty(null);    // ""
+        StringUtils.stripToEmpty("");      // ""
+        StringUtils.stripToEmpty(" ");     // ""
+        StringUtils.stripToEmpty(" abc "); // "abc"
+
+        StringUtils.stripToNull(null);    // null
+        StringUtils.stripToNull("");      // null
+        StringUtils.stripToNull(" ");     // null
+        StringUtils.stripToNull(" abc "); // "abc"
+
+        StringUtils.strip(null, "anything"); // null
+        StringUtils.strip("", "anything");   // ""
+        StringUtils.strip(" ", "anything");  // ""
+        StringUtils.strip(" abc ", null);    // "abc"
+        StringUtils.strip("yxabcz", "xyz");  // "abc"
+
+        StringUtils.stripStart(null, "anything"); // null
+        StringUtils.stripStart("", "anything"); // ""
+
 
         // equals|equalsIgnoreCase
         StringUtils.equals(null, null);   // true
