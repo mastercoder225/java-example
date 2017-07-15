@@ -9,7 +9,7 @@ import java.lang.reflect.Modifier;
 public class JavaClass {
 
     public static void main(String[] args) {
-        Class<JavaClass> clazz = JavaClass.class;
+        Class<Integer> clazz = Integer.class;
 
         // class name
         clazz.getName(); // com.example.java.reflection.JavaClass
