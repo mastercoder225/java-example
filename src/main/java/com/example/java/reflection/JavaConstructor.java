@@ -4,48 +4,16 @@ import java.lang.reflect.Constructor;
 
 public class JavaConstructor {
 
-    public JavaConstructor() {}
-
-    public JavaConstructor(String param) {
-        System.out.println(param);
-    }
-
     public static void main(String[] args) throws Exception {
-        Class<JavaConstructor> clazz = JavaConstructor.class;
+        Class<Integer> clazz = Integer.class;
 
-        // getting all constructors
+        // get all constructors
         Constructor<?>[] constructors = clazz.getConstructors();
 
-        // getting a specific constructor
-        Constructor<JavaConstructor> constructor = clazz.getConstructor(String.class);
+        // get a specific constructor
+        Constructor<Integer> constructor = clazz.getConstructor(String.class);
 
-        // create new object using constructor object
-        JavaConstructor javaConstructor = constructor.newInstance("test");
-
-
-
-
-
-
-
-
-
-
-
-
-
+        // create a new instance using a constructor
+        Integer i = constructor.newInstance("100");
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
