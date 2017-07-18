@@ -14,51 +14,17 @@ public class JavaCollection {
         collection.contains('X');
         collection.toArray();
         collection.toArray(new Character[10]);
+        collection.stream();
+        collection.parallelStream();
 
         collection.add('X');
         collection.remove('X');
 
         collection.addAll(Arrays.asList('A', 'B', 'C'));
         collection.removeAll(Arrays.asList('A', 'B', 'C'));
-        collection.removeIf(Character::isDigit);
         collection.retainAll(Arrays.asList('A', 'B', 'C'));
         collection.containsAll(Arrays.asList('A', 'B', 'C'));
+        collection.removeIf(Character::isDigit);
         collection.clear();
-
-
-
-
-
-
-
-
-
-
-
-
-        //System.out.println(Arrays.toString(characters));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        collection.forEach(System.out::println);
-
-
-
-
-
-
-
     }
 }
