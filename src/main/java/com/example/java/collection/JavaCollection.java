@@ -9,22 +9,27 @@ public class JavaCollection {
     public static void main(String[] args) {
         Collection<Character> collection = new ArrayList<>();
 
+        // Iterable
+        collection.iterator();
+        collection.spliterator();
+        collection.forEach(System.out::println);
+
+        // Collection
+        collection.add('X');
+        collection.addAll(Arrays.asList('A', 'B', 'C'));
+        collection.remove('X');
+        collection.removeAll(Arrays.asList('A', 'B', 'C'));
+        collection.removeIf(Character::isDigit);
+        collection.retainAll(Arrays.asList('A', 'B', 'C'));
+        collection.clear();
+
         collection.size();
         collection.isEmpty();
         collection.contains('X');
+        collection.containsAll(Arrays.asList('A', 'B', 'C'));
         collection.toArray();
         collection.toArray(new Character[10]);
         collection.stream();
         collection.parallelStream();
-
-        collection.add('X');
-        collection.remove('X');
-
-        collection.addAll(Arrays.asList('A', 'B', 'C'));
-        collection.removeAll(Arrays.asList('A', 'B', 'C'));
-        collection.retainAll(Arrays.asList('A', 'B', 'C'));
-        collection.containsAll(Arrays.asList('A', 'B', 'C'));
-        collection.removeIf(Character::isDigit);
-        collection.clear();
     }
 }
