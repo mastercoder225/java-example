@@ -9,12 +9,10 @@ public class JavaSet {
     public static void main(String[] args) {
         Set<Character> set = new HashSet<>();
 
-        // Iterable
         set.iterator();
         set.spliterator();
         set.forEach(System.out::println);
 
-        // Collection
         set.add('X');
         set.addAll(Arrays.asList('A', 'B', 'C'));
         set.remove('X');
@@ -22,7 +20,6 @@ public class JavaSet {
         set.removeIf(Character::isDigit);
         set.retainAll(Arrays.asList('A', 'B', 'C'));
         set.clear();
-
         set.size();
         set.isEmpty();
         set.contains('X');
