@@ -2,6 +2,7 @@ package com.example.java.collection;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class JavaList {
@@ -9,12 +10,10 @@ public class JavaList {
     public static void main(String[] args) {
         List<Character> list = new ArrayList<>();
 
-        // Iterable
         list.iterator();
         list.spliterator();
         list.forEach(System.out::println);
 
-        // Collection
         list.add('X');
         list.addAll(Arrays.asList('A', 'B', 'C'));
         list.remove(Character.valueOf('X'));
@@ -22,7 +21,6 @@ public class JavaList {
         list.removeIf(Character::isDigit);
         list.retainAll(Arrays.asList('A', 'B', 'C'));
         list.clear();
-
         list.size();
         list.isEmpty();
         list.contains('X');
@@ -32,15 +30,14 @@ public class JavaList {
         list.stream();
         list.parallelStream();
 
-        // List
         list.add(0, 'X');
         list.addAll(0, Arrays.asList('A', 'B', 'C'));
+        list.remove(0);
         list.get(0);
         list.set(0, 'X');
-        list.remove(0);
-        //list.replaceAll();
-        //list.sort();
-        list.subList(0, 10);
+        list.replaceAll(Character::toLowerCase);
+        list.sort(Comparator.comparing(Character::charValue));
+        list.subList(0, 1);
         list.indexOf('X');
         list.lastIndexOf('X');
         list.listIterator();

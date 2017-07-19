@@ -9,12 +9,10 @@ public class JavaCollection {
     public static void main(String[] args) {
         Collection<Character> collection = new ArrayList<>();
 
-        // Iterable
         collection.iterator();
         collection.spliterator();
         collection.forEach(System.out::println);
 
-        // Collection
         collection.add('X');
         collection.addAll(Arrays.asList('A', 'B', 'C'));
         collection.remove('X');
@@ -22,7 +20,6 @@ public class JavaCollection {
         collection.removeIf(Character::isDigit);
         collection.retainAll(Arrays.asList('A', 'B', 'C'));
         collection.clear();
-
         collection.size();
         collection.isEmpty();
         collection.contains('X');
