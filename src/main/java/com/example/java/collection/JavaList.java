@@ -36,7 +36,7 @@ public class JavaList {
         list.get(0);
         list.set(0, 'X');
         list.replaceAll(Character::toLowerCase);
-        list.sort(Comparator.comparing(Character::charValue));
+        list.sort(Comparator.comparingInt(Character::getNumericValue));
         list.subList(0, 1);
         list.indexOf('X');
         list.lastIndexOf('X');
