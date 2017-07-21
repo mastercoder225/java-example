@@ -12,28 +12,30 @@ public class JavaCollection {
     public static void main(String[] args) {
         Collection<Character> collection = new ArrayList<>();
 
-        // query operations
+        // add
+        boolean isAdd = collection.add('X');
+        boolean isAddAll = collection.addAll(Arrays.asList('A', 'B', 'C'));
+
+        // remove
+        boolean isRemove = collection.remove('X');
+        boolean isRemoveAll = collection.removeAll(Arrays.asList('A', 'B', 'C'));
+        boolean isRemoveIf = collection.removeIf(Character::isLowerCase);
+        boolean isRetainAll = collection.retainAll(Arrays.asList('A', 'B', 'C'));
+        collection.clear();
+
+        // query
         int size = collection.size();
         boolean isEmpty = collection.isEmpty();
-        boolean isContainsX = collection.contains('X');
+        boolean contains = collection.contains('X');
+        boolean containsAll = collection.containsAll(Arrays.asList('A', 'B', 'C'));
+
+        // transform
         Iterator<Character> iterator = collection.iterator();
         Spliterator<Character> spliterator = collection.spliterator();
         Stream<Character> stream = collection.stream();
         Stream<Character> parallelStream = collection.parallelStream();
         Object[] objects = collection.toArray();
         Character[] characters = collection.toArray(new Character[0]);
-
-        // modification operations
-        boolean isAddX = collection.add('X');
-        boolean isRemoveX= collection.remove('X');
-
-        // bulk operations
-        boolean isAddAllABC = collection.addAll(Arrays.asList('A', 'B', 'C'));
-        boolean isRemoveAllABC = collection.removeAll(Arrays.asList('A', 'B', 'C'));
-        boolean isRemoveIfDigit = collection.removeIf(Character::isDigit);
-        boolean isRetainAllABC = collection.retainAll(Arrays.asList('A', 'B', 'C'));
-        boolean isContainsAllABC = collection.containsAll(Arrays.asList('A', 'B', 'C'));
-        collection.clear();
 
         collection.forEach(System.out::println);
     }

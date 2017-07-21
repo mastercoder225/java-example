@@ -9,7 +9,7 @@ public class JavaIterable {
     public static void main(String[] args) {
         Iterable<Character> iterable = Arrays.asList('A', 'B', 'C');
 
-        // query operations
+        // transform
         Iterator<Character> iterator = iterable.iterator();
         Spliterator<Character> spliterator = iterable.spliterator();
 

@@ -14,45 +14,52 @@ public class JavaList {
     public static void main(String[] args) {
         List<Character> list = new ArrayList<>();
 
-        // query operations
+        // add
+        boolean isAdd = list.add('X');
+        list.add(0, 'X');
+        boolean isAddAll = list.addAll(Arrays.asList('A', 'B', 'C'));
+        boolean isIndexAddAll = list.addAll(0, Arrays.asList('A', 'B', 'C'));
+
+        // get
+        Character character = list.get(0);
+
+        // index
+        int firstInedxOf = list.indexOf('X');
+        int lastIndexOf = list.lastIndexOf('X');
+
+        // view
+        List<Character> view = list.subList(0, 0);
+
+        // replace
+        Character previousCharacter = list.set(0, 'X');
+        list.replaceAll(Character::toLowerCase);
+
+        // sort
+        list.sort(Comparator.comparingInt(Character::getNumericValue));
+
+        // remove
+        boolean isRemove = list.remove(Character.valueOf('X'));
+        Character removedCharacter = list.remove(0);
+        boolean isRemoveAll = list.removeAll(Arrays.asList('A', 'B', 'C'));
+        boolean isRemoveIf = list.removeIf(Character::isLowerCase);
+        boolean isRetainAll = list.retainAll(Arrays.asList('A', 'B', 'C'));
+        list.clear();
+
+        // query
         int size = list.size();
         boolean isEmpty = list.isEmpty();
-        boolean isContainsX = list.contains('X');
+        boolean contains = list.contains('X');
+        boolean containsAll = list.containsAll(Arrays.asList('A', 'B', 'C'));
+
+        // transform
         Iterator<Character> iterator = list.iterator();
         Spliterator<Character> spliterator = list.spliterator();
         ListIterator<Character> listIterator = list.listIterator();
-        ListIterator<Character> listIteratorAtGivenIndex = list.listIterator(0);
+        ListIterator<Character> indexListIterator = list.listIterator(0);
         Stream<Character> stream = list.stream();
         Stream<Character> parallelStream = list.parallelStream();
         Object[] objects = list.toArray();
         Character[] characters = list.toArray(new Character[0]);
-
-        // modification operations
-        boolean isAddX = list.add('X');
-        boolean isRemoveX = list.remove(Character.valueOf('X'));
-
-        // bulk operations
-        boolean isAddAllABC = list.addAll(Arrays.asList('A', 'B', 'C'));
-        boolean isAddAllABCAtGivenIndex = list.addAll(0, Arrays.asList('A', 'B', 'C'));
-        boolean isRemoveAllABC = list.removeAll(Arrays.asList('A', 'B', 'C'));
-        boolean isRetainAllABC = list.retainAll(Arrays.asList('A', 'B', 'C'));
-        boolean isContainsAllABC = list.containsAll(Arrays.asList('A', 'B', 'C'));
-        list.replaceAll(Character::toLowerCase);
-        list.sort(Comparator.comparingInt(Character::getNumericValue));
-        list.clear();
-
-        // positional access operations
-        list.add(0, 'X');
-        Character characterAtGivenIndex = list.get(0);
-        Character previousCharacterAtGivenIndex = list.set(0, 'X');
-        Character removedCharacter = list.remove(0);
-
-        // search operations
-        int firstIndexOfX = list.indexOf('X');
-        int lastIndexOfX = list.lastIndexOf('X');
-
-        // view [from, to)
-        List<Character> subListView = list.subList(0, 0);
 
         list.forEach(System.out::println);
     }
