@@ -21,24 +21,24 @@ public class JavaNavigableMap {
         navigableMap.putAll(Collections.emptyMap());
 
         // get key
-        String ceilingKey = navigableMap.ceilingKey("key");
-        String firstKey = navigableMap.firstKey();
-        String lastKey = navigableMap.lastKey();
-        String floorKey = navigableMap.floorKey("key");
-        String higherKey = navigableMap.higherKey("key");
-        String lowerKey = navigableMap.lowerKey("key");
+        String firstKey = navigableMap.firstKey(); // min key
+        String lastKey = navigableMap.lastKey(); // max key
+        String lowerKey = navigableMap.lowerKey("key"); // max key in < key
+        String higherKey = navigableMap.higherKey("key"); // min key in > key
+        String floorKey = navigableMap.floorKey("key"); // max key in <= key
+        String ceilingKey = navigableMap.ceilingKey("key"); // min key in >= key
 
         // get value
         String value3 = navigableMap.get("key");
         String value4 = navigableMap.getOrDefault("key", "default");
 
         // get entry
-        Map.Entry<String, String> ceilingEntry = navigableMap.ceilingEntry("key");
-        Map.Entry<String, String> firstEntry = navigableMap.firstEntry();
-        Map.Entry<String, String> lastEntry = navigableMap.lastEntry();
-        Map.Entry<String, String> floorEntry = navigableMap.floorEntry("key");
-        Map.Entry<String, String> higherEntry = navigableMap.higherEntry("key");
-        Map.Entry<String, String> lowerEntry = navigableMap.lowerEntry("key");
+        Map.Entry<String, String> firstEntry = navigableMap.firstEntry(); // min entry
+        Map.Entry<String, String> lastEntry = navigableMap.lastEntry(); // max entry
+        Map.Entry<String, String> lowerEntry = navigableMap.lowerEntry("key"); // max entry in < key
+        Map.Entry<String, String> higherEntry = navigableMap.higherEntry("key"); // min entry in > key
+        Map.Entry<String, String> floorEntry = navigableMap.floorEntry("key"); // max entry in <= key
+        Map.Entry<String, String> ceilingEntry = navigableMap.ceilingEntry("key"); // min entry in >= key
 
         // view
         NavigableMap<String, String> headMap1 = navigableMap.headMap("toKey", true); // <= toKey
