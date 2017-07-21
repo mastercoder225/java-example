@@ -27,8 +27,8 @@ public class JavaList {
         int indexOf = list.indexOf('X');
         int lastIndexOf = list.lastIndexOf('X');
 
-        // view
-        List<Character> view = list.subList(0, 0);
+        // sublist view
+        List<Character> subListView = list.subList(0, 0);
 
         // replace
         Character previousCharacter = list.set(0, 'X');
