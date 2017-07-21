@@ -24,7 +24,7 @@ public class JavaList {
         Character character = list.get(0);
 
         // index
-        int firstInedxOf = list.indexOf('X');
+        int indexOf = list.indexOf('X');
         int lastIndexOf = list.lastIndexOf('X');
 
         // view
@@ -48,8 +48,8 @@ public class JavaList {
         // query
         int size = list.size();
         boolean isEmpty = list.isEmpty();
-        boolean contains = list.contains('X');
-        boolean containsAll = list.containsAll(Arrays.asList('A', 'B', 'C'));
+        boolean isContains = list.contains('X');
+        boolean isContainsAll = list.containsAll(Arrays.asList('A', 'B', 'C'));
 
         // transform
         Iterator<Character> iterator = list.iterator();

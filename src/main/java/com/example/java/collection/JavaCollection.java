@@ -26,8 +26,8 @@ public class JavaCollection {
         // query
         int size = collection.size();
         boolean isEmpty = collection.isEmpty();
-        boolean contains = collection.contains('X');
-        boolean containsAll = collection.containsAll(Arrays.asList('A', 'B', 'C'));
+        boolean isContains = collection.contains('X');
+        boolean isContainsAll = collection.containsAll(Arrays.asList('A', 'B', 'C'));
 
         // transform
         Iterator<Character> iterator = collection.iterator();

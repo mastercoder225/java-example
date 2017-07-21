@@ -13,13 +13,7 @@ public class JavaQueue {
     public static void main(String[] args) {
         Queue<Character> queue = new PriorityQueue<>();
 
-        queue.add('A');
-        queue.add('B');
-        queue.add('C');
 
-        queue.forEach(System.out::print);
-        queue.remove();
-        queue.forEach(System.out::print);
 
 
 

@@ -26,8 +26,8 @@ public class JavaSet {
         // query
         int size = set.size();
         boolean isEmpty = set.isEmpty();
-        boolean contains = set.contains('X');
-        boolean containsAll = set.containsAll(Arrays.asList('A', 'B', 'C'));
+        boolean isContains = set.contains('X');
+        boolean isContainsAll = set.containsAll(Arrays.asList('A', 'B', 'C'));
 
         // transform
         Iterator<Character> iterator = set.iterator();
