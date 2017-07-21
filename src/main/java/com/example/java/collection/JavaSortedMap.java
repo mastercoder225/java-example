@@ -18,9 +18,11 @@ public class JavaSortedMap {
         String value2 = sortedMap.putIfAbsent("key", "value");
         sortedMap.putAll(Collections.emptyMap());
 
-        // get
+        // get key
         String firstKey = sortedMap.firstKey();
         String lastKey = sortedMap.lastKey();
+
+        // get value
         String value3 = sortedMap.get("key");
         String value4 = sortedMap.getOrDefault("key", "default");
 

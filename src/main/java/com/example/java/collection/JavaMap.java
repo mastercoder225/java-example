@@ -16,7 +16,7 @@ public class JavaMap {
         String value2 = map.putIfAbsent("key", "value");
         map.putAll(Collections.emptyMap());
 
-        // get
+        // get value
         String value3 = map.get("key");
         String value4 = map.getOrDefault("key", "default");
 
