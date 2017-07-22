@@ -1,7 +1,5 @@
 package com.example.java.reflection;
 
-import lombok.Data;
-
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

@@ -7,13 +7,16 @@ public class JavaConstructor {
     public static void main(String[] args) throws Exception {
         Class<Integer> clazz = Integer.class;
 
-        // get all constructors
+        // public constructor
+        Constructor<Integer> constructor = clazz.getConstructor(String.class);
         Constructor<?>[] constructors = clazz.getConstructors();
 
-        // get a specific constructor
-        Constructor<Integer> constructor = clazz.getConstructor(String.class);
+        // public|protected|default|private constructor
+        Constructor<Integer> declaredConstructor = clazz.getDeclaredConstructor(String.class);
+        Constructor<?>[] declaredConstructors = clazz.getDeclaredConstructors();
 
-        // create a new instance using a constructor
-        Integer i = constructor.newInstance("100");
+        Integer integer = constructor.newInstance("1");
+
+
     }
 }
