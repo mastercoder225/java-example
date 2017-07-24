@@ -10,5 +10,9 @@ public class Test {
 
     public static void main(String[] args) {
         System.out.println(new DecimalFormat("0.##%").format(new BigDecimal("0.01")));
+
+
+        int[] a = {1, 2, 3};
+        System.out.println(a.length);
     }
 }
