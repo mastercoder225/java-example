@@ -1,6 +1,7 @@
 package com.example.java.lambda;
 
 import java.util.Random;
+import java.util.Stack;
 import java.util.stream.IntStream;
 
 public class JavaIntStream {
