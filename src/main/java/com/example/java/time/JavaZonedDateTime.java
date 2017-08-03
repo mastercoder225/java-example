@@ -1,4 +1,4 @@
-package com.example.java.datetime;
+package com.example.java.time;
 
 /**
  * Created by zhangjian on 2017/6/18.

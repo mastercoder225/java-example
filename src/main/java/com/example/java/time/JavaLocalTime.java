@@ -1,4 +1,4 @@
-package com.example.java.datetime;
+package com.example.java.time;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoField;
